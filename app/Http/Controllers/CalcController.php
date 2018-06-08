@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class CalcController extends Controller
 {
-    /**
+ /**
  * Точка входа в приложение
  *
  * @param  Request $request экземпляр текущего HTTP-запроса
@@ -45,10 +45,9 @@ class CalcController extends Controller
     public function operation($angle, $type, $operation)
     {
         $message = $operation . " (" . $angle;
-        if ($type == "degree") {
-            $angle = deg2rad($angle);
-            $message .= "<sup>o</sup>";
-        }
+        // начало исправления ошибки
+        
+        // конец исправления ошибки
         switch ($operation) {
             case "sin":
                 $result = sin($angle);
