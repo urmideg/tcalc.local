@@ -10,3 +10,5 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::match(['get', 'post'], '/', 'CalcController@index')->name('index');
